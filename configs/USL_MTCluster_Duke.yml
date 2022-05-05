@@ -1,0 +1,59 @@
+DATASETS:
+  TARGET: "duke"
+  MODE: "dense"
+  DENSE_STEP: 40
+  DIR: "datasets"
+  NAME: "DukeMTMC-VideoReID"
+
+OUTPUT_DIR: "log/real-duke-dense40-eps-bnn-nostride1-ft-euc-iter0.6-watl=-0.01-smoothk=60-cce0.006-str0.6_8.0"
+
+GPU_Device: [0,1,2,3]
+
+MODE: "usl_MTCluster_base"
+CLUSTER:
+  EPS: 0.600
+  ADAPTIVE: True
+  MIN_SAMPLES: 4
+  ICDBSCAN_OPTION: False
+  ICDBSCAN_RELAXED: -1.0
+  CCE_OPTION: True
+  CCE_LAMBDA: 0.006
+  STR_OPTION: True
+  STR_LAMBDA: 0.6
+  STR_GAMMA: 8.0
+
+INPUT:
+  REA:
+    ENABLED: True
+
+DATALOADER:
+  TRAIN_BATCH_SIZE: 64
+  ITERS: 400
+  TRAIN_SEQ_LEN: 4
+  CLUSTER_BATCH_SIZE: 16
+  CLUSTER_SEQ_LEN: 32
+  ITERS_CLUSTER_MULTIPLIER: 0.6
+  SAMPLE_CONSTRAINT: False
+  SAMPLE_CONSTRAINT_EXT_SIZE: -1
+  CLUSTER_SAMPLE_MULTI: 1
+
+CHECKPOING:
+  REMAIN_CLASSIFIER: False
+  SAVE_STEP: [-2]
+
+OPTIM:
+  SCHED: "single_step"
+  STEPS: [50]
+  EPOCHS: 50
+
+MODEL:
+  LOSSES:
+    ID_OPTION: 3
+    ID_K: 60
+    TRI_OPTION: 2
+    TRI_LAMBDA: -0.01
+
+TEST:
+  OVERLAP_CONSTRAINT: True
+  CCE_OPTION: True
+  STR_OPTION: True

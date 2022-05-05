@@ -1,0 +1,45 @@
+DATASETS:
+  TARGET: "mars"
+  DIR: "datasets"
+  MARS_INFO: "info"
+
+OUTPUT_DIR: "log/real-m0.6-eps-bnn-nostride1-ft-euc-4GPU-smoothk=60"
+
+GPU_Device: [0,1,2,3]
+
+MODE: "usl_MTCluster_base"
+CLUSTER:
+  EPS: 0.600
+  ADAPTIVE: True
+  MIN_SAMPLES: 4
+
+INPUT:
+  REA:
+    ENABLED: True
+
+DATALOADER:
+  TRAIN_BATCH_SIZE: 64
+  ITERS: 400
+  TRAIN_SEQ_LEN: 4
+  CLUSTER_BATCH_SIZE: 16
+  CLUSTER_SEQ_LEN: 32
+  ITERS_CLUSTER_MULTIPLIER: 0.6
+  SAMPLE_CONSTRAINT: False
+  SAMPLE_CONSTRAINT_EXT_SIZE: -1
+  CLUSTER_SAMPLE_MULTI: 1
+
+CHECKPOING:
+  REMAIN_CLASSIFIER: False
+  SAVE_STEP: [-2]
+
+OPTIM:
+  SCHED: "single_step"
+  STEPS: [40]
+  EPOCHS: 40
+
+MODEL:
+  LOSSES:
+    ID_OPTION: 3
+    ID_K: 60
+    TRI_OPTION: 1
+    TRI_LAMBDA: -0.075
