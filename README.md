@@ -45,7 +45,7 @@ Auxiliary information exploiting modules **TOC**, **STS** and **SCP** can only b
 The parameters related to the methods we proposed are introducted as follows. Modify the config (`config/*.yml`) as our paper suggests before training.
 
 ### Restricted Label Smoothing Cross Entropy Loss
-<img src="https://github.com/tenghehan/AuxUSLReID/blob/main/figs/RLSCE.png" width="400px">
+<img src="https://github.com/tenghehan/AuxUSLReID/blob/master/figs/RLSCE.png" width="400px">
 
 ```python
 # 1:CE 2:LSCE 3:RLSCE
@@ -57,7 +57,7 @@ _C.MODEL.LOSSES.CE.EPSILON = 0.1
 ```
 
 ### Weight Adaptive Triplet Loss
-<img src="https://github.com/tenghehan/AuxUSLReID/blob/main/figs/WATL.png" width="500px">
+<img src="https://github.com/tenghehan/AuxUSLReID/blob/master/figs/WATL.png" width="500px">
 
 ```python
 # 1:TL 2:WATL
@@ -91,7 +91,7 @@ _C.TEST.CONSTRAINT_PATH = 'overlap_relation.pickle'
 ```
 
 ### Spatio-Temporal Similarity
-<img src="https://github.com/tenghehan/AuxUSLReID/blob/main/figs/STS.png" width="300px">
+<img src="https://github.com/tenghehan/AuxUSLReID/blob/master/figs/STS.png" width="300px">
 
 ```python
 # whether to use STS in training
@@ -109,7 +109,7 @@ _C.TEST.STR_PATH = "spatio_temporal_relation_infer.pickle"
 ```
 
 ### Same Camera Penalty
-<img src="https://github.com/tenghehan/AuxUSLReID/blob/main/figs/SCP.png" width="300px">
+<img src="https://github.com/tenghehan/AuxUSLReID/blob/master/figs/SCP.png" width="300px">
 
 ```python
 # whether to use SCP in training
@@ -128,7 +128,7 @@ _C.TEST.CCE_PATH = "cross_camera_relation_infer.pickle"
 ## Download trained models
 The model weights of **Ours** and **Ours-** can be download from the [link](https://drive.google.com/drive/folders/1YhMjeF9xXTU9l8WY_IQdJozqyCjLlZPe?usp=sharing)
 
-<img src="https://github.com/tenghehan/AuxUSLReID/blob/main/figs/SOTA.png" width="500px">
+<img src="https://github.com/tenghehan/AuxUSLReID/blob/master/figs/SOTA.png" width="500px">
 
 ## Citation
 If you find this code useful for your research, please cite our paper
