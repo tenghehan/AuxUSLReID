@@ -1,6 +1,6 @@
 # AuxUSLReID
 
-The official implementation for the [A High-Accuracy Unsupervised Person Re-identification Method Using Auxiliary Information Mined from Datasets](https://arxiv.org/user/).
+The official implementation for the [A High-Accuracy Unsupervised Person Re-identification Method Using Auxiliary Information Mined from Datasets](https://arxiv.org/abs/2205.03124).
 
 ## Installation
 ```
@@ -134,4 +134,12 @@ The model weights of **Ours** and **Ours-** can be download from the [link](http
 If you find this code useful for your research, please cite our paper
 
 ```
+@misc{teng2022highaccuracy,
+    title={A High-Accuracy Unsupervised Person Re-identification Method Using Auxiliary Information Mined from Datasets},
+    author={Hehan Teng and Tao He and Yuchen Guo and Guiguang Ding},
+    year={2022},
+    eprint={2205.03124},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
