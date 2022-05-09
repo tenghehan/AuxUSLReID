@@ -1,3 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-high-accuracy-unsupervised-person-re/unsupervised-person-re-identification-on-11)](https://paperswithcode.com/sota/unsupervised-person-re-identification-on-11?p=a-high-accuracy-unsupervised-person-re)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-high-accuracy-unsupervised-person-re/unsupervised-person-re-identification-on-mars)](https://paperswithcode.com/sota/unsupervised-person-re-identification-on-mars?p=a-high-accuracy-unsupervised-person-re)
+
 # AuxUSLReID
 
 The official implementation for the [A High-Accuracy Unsupervised Person Re-identification Method Using Auxiliary Information Mined from Datasets](https://arxiv.org/abs/2205.03124).
